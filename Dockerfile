@@ -7,4 +7,4 @@ COPY . .
 EXPOSE 5070
 ENV FLASK_APP=product_list_app.py
 ENV FLASK_RUN_HOST=0.0.0.0
-CMD ["flask", "run", "--port", "5000"]
+CMD ["flask", "run", "--port", "5070"]
