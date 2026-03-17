@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flaskmonitor
+  name: pyapp
   labels:
-    app: flaskmonitor
+    app: pyapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flaskmonitor
+      app: pyapp
   template:
     metadata:
       labels:
-        app: flaskmonitor
+        app: pyapp
     spec:
       containers:
-      - name: flaskmonitor
+      - name: pyapp
         image: pannagaram/pyapp
         ports:
         - containerPort: 5070
