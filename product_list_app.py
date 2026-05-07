@@ -32,13 +32,9 @@ products = [
 # Retrieve a specific product: GET /products/<id>
 # Update a specific product: PUT /products/<id>
 # Delete a product: DELETE /products/<id>
-
-@app.route('/')
-def home():
-    return "Flask App Deployed Successfully"
     
 # Retrieve all products: GET /products. This endpoint should return a JSON representation of all the products in the products list. Example request - http://localhost:5000/products
-@app.route('/products', methods=['GET'], strict_slashes=False) # strict_slashes=False allows for both '/products' and '/products/' to return the same thing and methods=['GET'] specifies that this endpoint will only accept GET requests
+@app.route('/', methods=['GET'], strict_slashes=False) # strict_slashes=False allows for both '/products' and '/products/' to return the same thing and methods=['GET'] specifies that this endpoint will only accept GET requests
 def get_products():
     """returns all products"""
     return jsonify(products)
